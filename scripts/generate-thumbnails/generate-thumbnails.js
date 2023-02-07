@@ -20,7 +20,7 @@ const { argv } = yargs(hideBin(process.argv))
 
 if (argv.onlyNew) argv.noClean = true;
 
-const host = argv.host || "localhost:8080";
+const host = argv.host || "localhost:8082";
 
 const outputPath = path.resolve(__dirname, "..", "..", "assets", "thumbnails");
 function outputPathFor(part) {
