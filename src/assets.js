@@ -2959,7 +2959,7 @@ export default {
         "value": "mouth_lips-1-skin-1",
         "displayName": "Lips 1 Skin 1",
         "description": {
-          "Type": "lips-1-skin-1",
+          "Type": "lips-1",
           "Skin Tone": "skin-1"
         }
       },
@@ -2967,7 +2967,7 @@ export default {
         "value": "mouth_neutral-skin-1",
         "displayName": "Neutral Skin 1",
         "description": {
-          "Type": "neutral-skin-1",
+          "Type": "neutral",
           "Skin Tone": "skin-1"
         }
       },
@@ -2975,7 +2975,7 @@ export default {
         "value": "mouth_neutral-skin-2",
         "displayName": "Neutral Skin 2",
         "description": {
-          "Type": "neutral-skin-2",
+          "Type": "neutral",
           "Skin Tone": "skin-2"
         }
       },
@@ -2983,7 +2983,7 @@ export default {
         "value": "mouth_neutral-skin-3",
         "displayName": "Neutral Skin 3",
         "description": {
-          "Type": "neutral-skin-3",
+          "Type": "neutral",
           "Skin Tone": "skin-3"
         }
       },
@@ -2991,7 +2991,7 @@ export default {
         "value": "mouth_neutral-skin-4",
         "displayName": "Neutral Skin 4",
         "description": {
-          "Type": "neutral-skin-4",
+          "Type": "neutral",
           "Skin Tone": "skin-4"
         }
       },
@@ -2999,7 +2999,7 @@ export default {
         "value": "mouth_neutral-skin-5",
         "displayName": "Neutral Skin 5",
         "description": {
-          "Type": "neutral-skin-5",
+          "Type": "neutral",
           "Skin Tone": "skin-5"
         }
       },
@@ -3007,7 +3007,7 @@ export default {
         "value": "mouth_neutral-skin-6",
         "displayName": "Neutral Skin 6",
         "description": {
-          "Type": "neutral-skin-6",
+          "Type": "neutral",
           "Skin Tone": "skin-6"
         }
       },
@@ -3015,7 +3015,7 @@ export default {
         "value": "mouth_neutral-skin-7",
         "displayName": "Neutral Skin 7",
         "description": {
-          "Type": "neutral-skin-7",
+          "Type": "neutral",
           "Skin Tone": "skin-7"
         }
       },
@@ -3023,7 +3023,7 @@ export default {
         "value": "mouth_neutral-skin-8",
         "displayName": "Neutral Skin 8",
         "description": {
-          "Type": "neutral-skin-8",
+          "Type": "neutral",
           "Skin Tone": "skin-8"
         }
       },
@@ -3031,7 +3031,7 @@ export default {
         "value": "mouth_neutral-skin-a",
         "displayName": "Neutral Skin A",
         "description": {
-          "Type": "neutral-skin-a",
+          "Type": "neutral",
           "Skin Tone": "skin-a"
         }
       },
@@ -3039,7 +3039,7 @@ export default {
         "value": "mouth_neutral-skin-b",
         "displayName": "Neutral Skin B",
         "description": {
-          "Type": "neutral-skin-b",
+          "Type": "neutral",
           "Skin Tone": "skin-b"
         }
       },
@@ -3047,7 +3047,7 @@ export default {
         "value": "mouth_neutral-skin-c",
         "displayName": "Neutral Skin C",
         "description": {
-          "Type": "neutral-skin-c",
+          "Type": "neutral",
           "Skin Tone": "skin-c"
         }
       },
@@ -3055,7 +3055,7 @@ export default {
         "value": "mouth_neutral-skin-d",
         "displayName": "Neutral Skin D",
         "description": {
-          "Type": "neutral-skin-d",
+          "Type": "neutral",
           "Skin Tone": "skin-d"
         }
       },
@@ -3063,7 +3063,7 @@ export default {
         "value": "mouth_neutral-skin-e",
         "displayName": "Neutral Skin E",
         "description": {
-          "Type": "neutral-skin-e",
+          "Type": "neutral",
           "Skin Tone": "skin-e"
         }
       },
@@ -3071,7 +3071,7 @@ export default {
         "value": "mouth_neutral-skin-f",
         "displayName": "Neutral Skin F",
         "description": {
-          "Type": "neutral-skin-f",
+          "Type": "neutral",
           "Skin Tone": "skin-f"
         }
       },
@@ -3079,7 +3079,7 @@ export default {
         "value": "mouth_neutral-skin-g",
         "displayName": "Neutral Skin G",
         "description": {
-          "Type": "neutral-skin-g",
+          "Type": "neutral",
           "Skin Tone": "skin-g"
         }
       },
@@ -3087,7 +3087,7 @@ export default {
         "value": "mouth_neutral-skin-h",
         "displayName": "Neutral Skin H",
         "description": {
-          "Type": "neutral-skin-h",
+          "Type": "neutral",
           "Skin Tone": "skin-h"
         }
       },
@@ -3095,7 +3095,7 @@ export default {
         "value": "mouth_smirk-skin-1",
         "displayName": "Smirk Skin 1",
         "description": {
-          "Type": "smirk-skin-1",
+          "Type": "smirk",
           "Skin Tone": "skin-1"
         }
       },
@@ -3103,7 +3103,7 @@ export default {
         "value": "mouth_smirk-skin-2",
         "displayName": "Smirk Skin 2",
         "description": {
-          "Type": "smirk-skin-2",
+          "Type": "smirk",
           "Skin Tone": "skin-2"
         }
       },
@@ -3111,7 +3111,7 @@ export default {
         "value": "mouth_smirk-skin-3",
         "displayName": "Smirk Skin 3",
         "description": {
-          "Type": "smirk-skin-3",
+          "Type": "smirk",
           "Skin Tone": "skin-3"
         }
       },
@@ -3119,7 +3119,7 @@ export default {
         "value": "mouth_smirk-skin-4",
         "displayName": "Smirk Skin 4",
         "description": {
-          "Type": "smirk-skin-4",
+          "Type": "smirk",
           "Skin Tone": "skin-4"
         }
       },
@@ -3127,7 +3127,7 @@ export default {
         "value": "mouth_smirk-skin-5",
         "displayName": "Smirk Skin 5",
         "description": {
-          "Type": "smirk-skin-5",
+          "Type": "smirk",
           "Skin Tone": "skin-5"
         }
       },
@@ -3135,7 +3135,7 @@ export default {
         "value": "mouth_smirk-skin-6",
         "displayName": "Smirk Skin 6",
         "description": {
-          "Type": "smirk-skin-6",
+          "Type": "smirk",
           "Skin Tone": "skin-6"
         }
       },
@@ -3143,7 +3143,7 @@ export default {
         "value": "mouth_smirk-skin-7",
         "displayName": "Smirk Skin 7",
         "description": {
-          "Type": "smirk-skin-7",
+          "Type": "smirk",
           "Skin Tone": "skin-7"
         }
       },
@@ -3151,7 +3151,7 @@ export default {
         "value": "mouth_smirk-skin-8",
         "displayName": "Smirk Skin 8",
         "description": {
-          "Type": "smirk-skin-8",
+          "Type": "smirk",
           "Skin Tone": "skin-8"
         }
       },
@@ -3159,7 +3159,7 @@ export default {
         "value": "mouth_smirk-skin-a",
         "displayName": "Smirk Skin A",
         "description": {
-          "Type": "smirk-skin-a",
+          "Type": "smirk",
           "Skin Tone": "skin-a"
         }
       },
@@ -3167,7 +3167,7 @@ export default {
         "value": "mouth_smirk-skin-b",
         "displayName": "Smirk Skin B",
         "description": {
-          "Type": "smirk-skin-b",
+          "Type": "smirk",
           "Skin Tone": "skin-b"
         }
       },
@@ -3175,7 +3175,7 @@ export default {
         "value": "mouth_smirk-skin-c",
         "displayName": "Smirk Skin C",
         "description": {
-          "Type": "smirk-skin-c",
+          "Type": "smirk",
           "Skin Tone": "skin-c"
         }
       },
@@ -3183,7 +3183,7 @@ export default {
         "value": "mouth_smirk-skin-d",
         "displayName": "Smirk Skin D",
         "description": {
-          "Type": "smirk-skin-d",
+          "Type": "smirk",
           "Skin Tone": "skin-d"
         }
       },
@@ -3191,7 +3191,7 @@ export default {
         "value": "mouth_smirk-skin-e",
         "displayName": "Smirk Skin E",
         "description": {
-          "Type": "smirk-skin-e",
+          "Type": "smirk",
           "Skin Tone": "skin-e"
         }
       },
@@ -3199,7 +3199,7 @@ export default {
         "value": "mouth_smirk-skin-f",
         "displayName": "Smirk Skin F",
         "description": {
-          "Type": "smirk-skin-f",
+          "Type": "smirk",
           "Skin Tone": "skin-f"
         }
       },
@@ -3207,7 +3207,7 @@ export default {
         "value": "mouth_smirk-skin-g",
         "displayName": "Smirk Skin G",
         "description": {
-          "Type": "smirk-skin-g",
+          "Type": "smirk",
           "Skin Tone": "skin-g"
         }
       },
@@ -3215,7 +3215,7 @@ export default {
         "value": "mouth_smirk-skin-h",
         "displayName": "Smirk Skin H",
         "description": {
-          "Type": "smirk-skin-h",
+          "Type": "smirk",
           "Skin Tone": "skin-h"
         }
       }
@@ -3224,39 +3224,9 @@ export default {
       "Type": {
         "options": [
           null,
-          "lips-1-skin-1",
-          "neutral-skin-1",
-          "neutral-skin-2",
-          "neutral-skin-3",
-          "neutral-skin-4",
-          "neutral-skin-5",
-          "neutral-skin-6",
-          "neutral-skin-7",
-          "neutral-skin-8",
-          "neutral-skin-a",
-          "neutral-skin-b",
-          "neutral-skin-c",
-          "neutral-skin-d",
-          "neutral-skin-e",
-          "neutral-skin-f",
-          "neutral-skin-g",
-          "neutral-skin-h",
-          "smirk-skin-1",
-          "smirk-skin-2",
-          "smirk-skin-3",
-          "smirk-skin-4",
-          "smirk-skin-5",
-          "smirk-skin-6",
-          "smirk-skin-7",
-          "smirk-skin-8",
-          "smirk-skin-a",
-          "smirk-skin-b",
-          "smirk-skin-c",
-          "smirk-skin-d",
-          "smirk-skin-e",
-          "smirk-skin-f",
-          "smirk-skin-g",
-          "smirk-skin-h"
+          "lips-1",
+          "neutral",
+          "smirk"
         ],
         "isPrimaryOption": true
       },
@@ -3867,15 +3837,6 @@ export default {
         "excludeFromRandomize": true
       },
       {
-        "value": "torso_style-1-bowling-shirt-1-red",
-        "displayName": "Style 1 Bowling Shirt 1 Red",
-        "description": {
-          "Type": "style-1",
-          "Outfit": "bowling-shirt-1-red"
-        },
-        "matchRandomizationToNull": true
-      },
-      {
         "value": "torso_style-1-bowling-shirt-near-red",
         "displayName": "Style 1 Bowling Shirt Near Red",
         "description": {
@@ -3909,46 +3870,6 @@ export default {
           "Outfit": "sport-coat-1-gray"
         },
         "matchRandomizationToNull": true
-      },
-      {
-        "value": "torso_style-1-tshirt-1-hubs-black",
-        "displayName": "Style 1 Tshirt 1 Hubs Black",
-        "description": {
-          "Type": "style-1",
-          "Outfit": "tshirt-1-hubs-black"
-        }
-      },
-      {
-        "value": "torso_style-1-tshirt-1-hubs-gray",
-        "displayName": "Style 1 Tshirt 1 Hubs Gray",
-        "description": {
-          "Type": "style-1",
-          "Outfit": "tshirt-1-hubs-gray"
-        }
-      },
-      {
-        "value": "torso_style-1-tshirt-1-hubs-light-gray",
-        "displayName": "Style 1 Tshirt 1 Hubs Light Gray",
-        "description": {
-          "Type": "style-1",
-          "Outfit": "tshirt-1-hubs-light-gray"
-        }
-      },
-      {
-        "value": "torso_style-1-tshirt-1-hubs-white",
-        "displayName": "Style 1 Tshirt 1 Hubs White",
-        "description": {
-          "Type": "style-1",
-          "Outfit": "tshirt-1-hubs-white"
-        }
-      },
-      {
-        "value": "torso_style-1-tshirt-1-moz",
-        "displayName": "Style 1 Tshirt 1 Moz",
-        "description": {
-          "Type": "style-1",
-          "Outfit": "tshirt-1-moz"
-        }
       },
       {
         "value": "torso_style-1-tshirt-1-near-grey",
@@ -4012,30 +3933,6 @@ export default {
         "description": {
           "Type": "style-1",
           "Outfit": "tshirt-1-union-jack"
-        }
-      },
-      {
-        "value": "torso_style-1-tshirt-pride01",
-        "displayName": "Style 1 Tshirt Pride01",
-        "description": {
-          "Type": "style-1",
-          "Outfit": "tshirt-pride01"
-        }
-      },
-      {
-        "value": "torso_style-1-tshirt-pride02",
-        "displayName": "Style 1 Tshirt Pride02",
-        "description": {
-          "Type": "style-1",
-          "Outfit": "tshirt-pride02"
-        }
-      },
-      {
-        "value": "torso_style-1-tshirt-pride03",
-        "displayName": "Style 1 Tshirt Pride03",
-        "description": {
-          "Type": "style-1",
-          "Outfit": "tshirt-pride03"
         }
       },
       {
@@ -4105,38 +4002,6 @@ export default {
         }
       },
       {
-        "value": "torso_style-2-tshirt-1-hubs-black",
-        "displayName": "Style 2 Tshirt 1 Hubs Black",
-        "description": {
-          "Type": "style-2",
-          "Outfit": "tshirt-1-hubs-black"
-        }
-      },
-      {
-        "value": "torso_style-2-tshirt-1-hubs-gray",
-        "displayName": "Style 2 Tshirt 1 Hubs Gray",
-        "description": {
-          "Type": "style-2",
-          "Outfit": "tshirt-1-hubs-gray"
-        }
-      },
-      {
-        "value": "torso_style-2-tshirt-1-hubs-light-gray",
-        "displayName": "Style 2 Tshirt 1 Hubs Light Gray",
-        "description": {
-          "Type": "style-2",
-          "Outfit": "tshirt-1-hubs-light-gray"
-        }
-      },
-      {
-        "value": "torso_style-2-tshirt-1-hubs-white",
-        "displayName": "Style 2 Tshirt 1 Hubs White",
-        "description": {
-          "Type": "style-2",
-          "Outfit": "tshirt-1-hubs-white"
-        }
-      },
-      {
         "value": "torso_style-2-tshirt-1-moz",
         "displayName": "Style 2 Tshirt 1 Moz",
         "description": {
@@ -4185,30 +4050,6 @@ export default {
         }
       },
       {
-        "value": "torso_style-2-tshirt-pride01",
-        "displayName": "Style 2 Tshirt Pride01",
-        "description": {
-          "Type": "style-2",
-          "Outfit": "tshirt-pride01"
-        }
-      },
-      {
-        "value": "torso_style-2-tshirt-pride02",
-        "displayName": "Style 2 Tshirt Pride02",
-        "description": {
-          "Type": "style-2",
-          "Outfit": "tshirt-pride02"
-        }
-      },
-      {
-        "value": "torso_style-2-tshirt-pride03",
-        "displayName": "Style 2 Tshirt Pride03",
-        "description": {
-          "Type": "style-2",
-          "Outfit": "tshirt-pride03"
-        }
-      },
-      {
         "value": "torso_style-2-tshirt-union-jack",
         "displayName": "Style 2 Tshirt Union Jack",
         "description": {
@@ -4236,16 +4077,10 @@ export default {
       },
       "Outfit": {
         "options": [
-          "bowling-shirt-1-red",
           "bowling-shirt-near-red",
           "combat-vest-red",
           "sport-coat-1-dark",
           "sport-coat-1-gray",
-          "tshirt-1-hubs-black",
-          "tshirt-1-hubs-gray",
-          "tshirt-1-hubs-light-gray",
-          "tshirt-1-hubs-white",
-          "tshirt-1-moz",
           "tshirt-1-near-grey",
           "tshirt-1-near-logo-black",
           "tshirt-1-near-pride-2",
@@ -4254,9 +4089,6 @@ export default {
           "tshirt-1-near-red",
           "tshirt-1-near-white",
           "tshirt-1-union-jack",
-          "tshirt-pride01",
-          "tshirt-pride02",
-          "tshirt-pride03",
           "tshirt1-reactor",
           "ugly-christmas-1",
           "waistcoat-and-cravat",
@@ -4265,6 +4097,7 @@ export default {
           "tshirt-1-baby-unicorn",
           "tshirt-1-heart-animated",
           "tshirt-1-heart",
+          "tshirt-1-moz",
           "tshirt-1-near-black",
           "tshirt-1-near-purple",
           "tshirt-1-pink",
