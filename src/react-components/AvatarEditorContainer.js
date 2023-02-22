@@ -11,6 +11,9 @@ import { generateRandomConfig } from "../generate-random-config";
 import initialAssets from "../assets";
 import { isThumbnailMode } from "../utils";
 import debounce from "../utils/debounce";
+import { initNearContracts } from '../wallets/near';
+import { initNear } from '../store/near';
+import { useDispatch } from 'react-redux';
 
 // Used externally by the generate-thumbnails script
 const thumbnailMode = isThumbnailMode();
@@ -24,6 +27,23 @@ export function AvatarEditorContainer() {
   const initialConfig = generateRandomConfig(assets);
   const [avatarConfig, setAvatarConfig] = useState(initialConfig);
   const [tipState, setTipState] = useState({ visible: false, text: "", top: 0, left: 0 });
+  const dispatchRedux = useDispatch();  
+
+  useEffect(() => {
+
+      initNearContracts().then(({near, nftContract, nftContract2, nftContract3, marketContract, nearConfig, wallet}) => {
+        dispatchRedux(initNear({
+          api: near,
+          config: nearConfig, 
+          wallet, 
+          nftContract, 
+          nftContract2,
+          nftContract3,
+          marketContract
+        }));
+      });
+
+  }, [dispatchRedux]);
 
   useEffect(() => {
     if (!thumbnailMode) {

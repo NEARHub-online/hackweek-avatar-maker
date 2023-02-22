@@ -6,4 +6,5 @@ export default {
   renderThumbnail: "renderThumbnail",
   thumbnailResult: "thumbnailResult",
   combinedMeshName: "CombinedMesh",
+  takeScreenshot: "takeScreenshot",
 };

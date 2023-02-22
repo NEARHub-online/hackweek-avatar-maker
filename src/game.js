@@ -54,6 +54,7 @@ const state = {
   quietMode: false,
   shouldRenderInQuietMode: true,
   shouldApplyMorphRelationships: false,
+  shouldTakeScreenshot: false,
 };
 window.gameState = state;
 
@@ -76,6 +77,11 @@ document.addEventListener(constants.exportAvatar, () => {
 });
 document.addEventListener(constants.resetView, () => {
   state.shouldResetView = true;
+});
+
+document.addEventListener(constants.takeScreenshot, () => {
+  state.shouldTakeScreenshot = true;
+  
 });
 
 function onKeyChange(e) {
@@ -106,6 +112,15 @@ function ensureAvatarNode(category) {
 function resetView() {
   state.controls.reset();
 }
+
+function takeScreenshot(){
+  state.controls.reset();
+  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("scene"), antialias: true });
+  var imagedata =  renderer.domElement.toDataURL();
+  console.log(imagedata);
+  setScreenshot(imagedata);
+  return imagedata;
+};
 
 function init() {
   THREE.Cache.enabled = !isThumbnailMode();
@@ -387,6 +402,13 @@ function tick(time) {
     if (state.shouldResetView) {
       state.shouldResetView = false;
       resetView();
+    }
+  }
+  
+  {
+    if (state.shouldTakeScreenshot) {
+      state.shouldTakeScreenshot = false;
+      takeScreenshot();
     }
   }
 
