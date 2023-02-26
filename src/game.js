@@ -84,6 +84,26 @@ document.addEventListener(constants.takeScreenshot, () => {
   
 });
 
+const b64toBlob = (b64Data, contentType='', sliceSize=512) => {
+  const byteCharacters = atob(b64Data);
+  const byteArrays = [];
+
+  for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+    const slice = byteCharacters.slice(offset, offset + sliceSize);
+
+    const byteNumbers = new Array(slice.length);
+    for (let i = 0; i < slice.length; i++) {
+      byteNumbers[i] = slice.charCodeAt(i);
+    }
+
+    const byteArray = new Uint8Array(byteNumbers);
+    byteArrays.push(byteArray);
+  }
+
+  const blob = new Blob(byteArrays, {type: contentType});
+  return blob;
+}
+
 function onKeyChange(e) {
   switch (e.key) {
     case "ArrowRight":
@@ -117,9 +137,17 @@ function takeScreenshot(){
   state.controls.reset();
   const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("scene"), antialias: true });
   var imagedata =  renderer.domElement.toDataURL();
+  const byteCharacters = atob(imagedata);
   console.log(imagedata);
-  setScreenshot(imagedata);
-  return imagedata;
+  const blob = new Blob([byteCharacters], { type: "image/png" });
+  const url = URL.createObjectURL(blob);
+  
+  const el_img = document.createElement("a");
+  el_img.style.display = "none";
+  el_img.href = imagedata;
+  el_img.download = "screenshot.png";
+  el_img.id = "avatar_screenshot";
+  document.body.appendChild(el_img);
 };
 
 function init() {
@@ -140,7 +168,7 @@ function init() {
   scene.add(directionalLight);
 
   // TODO: Square this with react
-  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("scene"), antialias: true });
+  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("scene"), antialias: true, preserveDrawingBuffer: true, });
   renderer.physicallyCorrectLights = true;
   renderer.gammaOutput = true;
   state.renderer = renderer;
@@ -378,12 +406,34 @@ function tick(time) {
         const url = URL.createObjectURL(blob);
 
         if (!debugConfig.disableDownload) {
+          document.getElementById("avatar_glb")?.remove();
           const el = document.createElement("a");
           el.style.display = "none";
           el.href = url;
           el.download = "custom_avatar.glb";
-          el.click();
-          el.remove();
+          el.id = "avatar_glb";
+          document.body.appendChild(el);
+          //el.click();
+          //el.remove();
+
+          
+          const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("scene"), antialias: true });
+          renderer.domElement.toBlob( ( blob ) => {
+            document.getElementById("avatar_screenshot")?.remove();
+            
+            const url = URL.createObjectURL(blob);
+            console.log(blob);
+            const el_img = document.createElement("a");
+            el_img.style.display = "none";
+            el_img.href = url;
+            el_img.download = "screenshot.png";
+            el_img.id = "avatar_screenshot";
+            document.body.appendChild(el_img);
+        
+        });
+          
+          
+
         }
 
         if (debugConfig.debugExports) {

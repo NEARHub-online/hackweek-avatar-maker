@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Toolbar } from "./Toolbar";
 import { UploadButton } from "./UploadButton";
 import { MoreMenu } from "./MoreMenu";
@@ -6,7 +6,10 @@ import { dispatch } from "../dispatch";
 import constants from "../constants";
 import NEAR from '../constants/near';
 import { useSelector } from 'react-redux';
+import * as THREE from "three";
+import * as Hash from "ipfs-only-hash";
 
+var imagedata;
 function dispatchResetView() {
   dispatch(constants.resetView);
 }
@@ -16,20 +19,52 @@ function dispatchExportAvatar() {
 }
 
 function takeScreenshot(){
-  dispatch(constants.takeScreenshot);
+  dispatch(constants.resetView);
+  setTimeout(function() {
+    dispatch(constants.exportAvatar);
+  }, 100);
 }
 
 export function ToolbarContainer({ onGLBUploaded, randomizeConfig }) {
-  const [getScreenshot, setScreenshot] = useState(false);
   const nearWallet = useSelector(state => state.near.wallet);
+  const ftContract = useSelector(state => state.near.nftContract2);
+  const [showMenu, setShowMenu] = useState(false);
+  const [qtyToken, setqtyToken] = useState('0');
+
+
+  const data = 'hello world!'
+  Hash.of(data).then((hash) => {console.log("hash: ", hash)});
+
+
+  useEffect(() => {
+      if (ftContract) {
+        ftContract.ft_balance_of({account_id: nearWallet.getAccountId()}).then((qty) => {
+          setqtyToken(qty)
+          console.log("Quantity", qty);
+        });
+      }
+  }, [ftContract, nearWallet]);
+
+  const handleWalletClick = (e) => {
+    if (nearWallet?.isSignedIn()) {
+        setShowMenu(false);
+    } else {
+        login();
+    }
+}
 
   const login = () => {
-    console.log("qua: ", nearWallet)
       nearWallet?.requestSignIn(
           NEAR.NFT_CONTRACT_NAME,
           'Nearhub Avatar'
       );
+      setShowMenu(false);
   }
+
+  const logout = () => {
+    nearWallet?.signOut();
+    setShowMenu(true);
+}
 
   return (
     <Toolbar>
@@ -45,18 +80,17 @@ export function ToolbarContainer({ onGLBUploaded, randomizeConfig }) {
             </>
           }
         ></MoreMenu>
-        <input type="hidden" id="screenshot" value={getScreenshot} />
         <button onClick={randomizeConfig}>Randomize avatar</button>
         <button onClick={dispatchResetView}>Reset camera view</button>
-        {/* <button onClick={takeScreenshot}>Take screenshot</button> */}
         
           
-        
-        { nearWallet?.isSignedIn() && nearWallet.getAccountId() &&
-          <button onClick={dispatchExportAvatar} className="primary">Mint avatar</button>
-        }
-        { nearWallet?.isSignedIn() !== true &&
-          <button onClick={login} >Connect Wallet</button>
+
+        <span onClick={handleWalletClick} className="sc-button header-slider style style-1 wallet fl-button pri-1 pointer" style={nearWallet?.isSignedIn()?{border:'none'}:{}}>
+          <span>{ nearWallet?.isSignedIn() ? nearWallet.getAccountId() +  " - " + qtyToken : 'Connect Wallet' }</span>
+        </span>
+
+        { nearWallet?.isSignedIn() === true && showMenu !== true &&
+          <span><button onClick={takeScreenshot}>Mint Avatar</button><button onClick={logout}>Logout</button></span>
         }
       </div>
       <div className="toolbarNotice">

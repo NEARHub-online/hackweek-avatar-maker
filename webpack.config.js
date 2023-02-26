@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const webpack = require('webpack');
 
 const isProd = process.env.NODE_ENV === "production";
 const publicPath = isProd ? "dist/" : "/";
@@ -53,5 +54,18 @@ module.exports = {
       filename: isProd ? path.resolve("./index.html") : "index.html",
       template: "src/index.html",
     }),
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    }),
+    new webpack.ProvidePlugin({
+        process: 'process/browser',
+    }),
   ],
+  resolve: {
+    extensions: [ '.ts', '.js' ],
+    fallback: {
+        "stream": require.resolve("stream-browserify"),
+        "buffer": require.resolve("buffer")
+    }
+  },
 };

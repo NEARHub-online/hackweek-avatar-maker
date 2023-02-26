@@ -28,6 +28,16 @@ export async function initNearContracts() {
         sender: wallet.getAccountId(), 
       }
     );       
+    
+    const nftContract2 = await new nearAPI.Contract(
+      wallet.account(),
+      (NEAR.FT_CONTRACT_NAME),
+      {
+        viewMethods: ['ft_balance_of'], 
+        changeMethods: ['storage_deposit', 'ft_transfer', 'ft_transfer_call'],
+        sender: wallet.getAccountId(), 
+      }
+    ); 
   
-    return { near, nftContract, nearConfig, wallet };
+    return { near, nftContract, nearConfig, wallet, nftContract2 };
 }
